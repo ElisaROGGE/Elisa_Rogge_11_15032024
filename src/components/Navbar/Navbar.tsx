@@ -1,13 +1,15 @@
 import React from 'react';
-import * as URL from '../routes';
+import * as URL from '../../routes';
 import './Navbar.scss';
+import logo from '../../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
 
     const links = [{
-        name: 'Home',
+        name: 'Accueil',
         url: URL.HOME
     }, {
         name: 'A propos',
@@ -15,7 +17,9 @@ const Navbar: React.FC<NavbarProps> = () => {
     }];
     return (
         <nav className='navbar'>
-            <img src="../assets/LOGO.png" alt="" />
+            <Link to={URL.HOME}>
+                <img src={logo} alt="logo" />
+            </Link>
             <ul>
                 {links.map((link, index) => (
                     <li key={index}>
