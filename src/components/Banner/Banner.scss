@@ -1,0 +1,21 @@
+.header-home{
+    font-family: 'Montserrat';
+    color: #ffffff;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2rem;
+    img{
+        border-radius: 15px;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        filter: brightness(50%);
+        object-fit: cover;
+    }
+    span{
+        font-size: 2rem;
+        position: absolute;
+    }
+}

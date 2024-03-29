@@ -1,5 +1,4 @@
 import React from 'react';
-import * as URL from '../../routes';
 import './Footer.scss';
 import logo from '../../assets/logo-white.png';
 

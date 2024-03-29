@@ -2,7 +2,7 @@ import React from 'react';
 import * as URL from '../../routes';
 import './Navbar.scss';
 import logo from '../../assets/logo.png';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 interface NavbarProps {}
 
@@ -23,7 +23,7 @@ const Navbar: React.FC<NavbarProps> = () => {
             <ul>
                 {links.map((link, index) => (
                     <li key={index}>
-                        <a href={link.url}>{link.name}</a>
+                        <NavLink to={link.url}>{link.name}</NavLink>
                     </li>
                 ))}
             </ul>
