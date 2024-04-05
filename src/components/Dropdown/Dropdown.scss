@@ -1,0 +1,20 @@
+.dropdown{
+    .title{
+        border-radius: 10px;
+        padding: 1rem 1.5rem;
+        background-color: #FF6060;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        font-weight: 500;
+        cursor: pointer;
+        font-family: "Montserrat", sans-serif;
+    }
+    .dropdown-content{
+        color: black;
+        padding: 1rem;
+        background-color: #F6F6F6;
+        border-radius: 10px;
+    }
+}

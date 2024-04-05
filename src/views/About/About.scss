@@ -1,0 +1,18 @@
+.about{
+    .header-home{
+        height: 11rem;
+        margin: 2rem;
+        
+    }
+    .dropdown{
+        margin: 2rem;
+        .title{
+            border-radius: 5px;
+        }
+        .dropdown-content{
+            font-size: 1.2rem;
+            border-radius: 5px;
+            line-height: 25px;
+        }
+    }
+}

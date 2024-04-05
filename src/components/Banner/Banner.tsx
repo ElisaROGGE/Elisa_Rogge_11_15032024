@@ -1,12 +1,12 @@
 import React from 'react';
 import './Banner.scss';
-import backgroundImage from '../../assets/bg-home.png'
 
 interface BannerProps {
     textImage?: string;
+    backgroundImage?: string;
 }
 
-const Banner: React.FC<BannerProps> = ({ textImage }) => {
+const Banner: React.FC<BannerProps> = ({ textImage, backgroundImage }) => {
 
     return (
         <div className='header-home'>
