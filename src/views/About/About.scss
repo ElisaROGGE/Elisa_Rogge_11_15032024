@@ -6,13 +6,16 @@
     }
     .dropdown{
         margin: 2rem;
-        .title{
-            border-radius: 5px;
+    }
+}
+@media (max-width: 768px) {
+    .about{
+        .header-home{
+            height: 8rem;
+            margin: 1rem;
         }
-        .dropdown-content{
-            font-size: 1.2rem;
-            border-radius: 5px;
-            line-height: 25px;
+        .dropdown{
+            margin: 1rem;
         }
     }
 }

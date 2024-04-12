@@ -1,1 +1,1 @@
-.about .header-home{height:11rem;margin:2rem}.about .dropdown{margin:2rem}.about .dropdown .title{border-radius:5px}.about .dropdown .dropdown-content{font-size:1.2rem;border-radius:5px;line-height:25px}
+.about .header-home{height:11rem;margin:2rem}.about .dropdown{margin:2rem}@media (max-width:768px){.about .header-home{height:8rem;margin:1rem}.about .dropdown{margin:1rem}}

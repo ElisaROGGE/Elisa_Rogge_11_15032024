@@ -1,5 +1,7 @@
 .header-home{
+    position: relative;
     font-family: 'Montserrat';
+    font-weight: 700;
     color: #ffffff;
     height: 8rem;
     display: flex;
@@ -17,5 +19,14 @@
     span{
         font-size: 2rem;
         position: absolute;
+    }
+}
+@media (max-width: 768px) {
+    .header-home{
+        height: 6rem;
+        margin: 0 1rem;
+        span{
+            font-size: 1.3rem;
+        }
     }
 }

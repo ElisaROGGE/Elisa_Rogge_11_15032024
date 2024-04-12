@@ -6,7 +6,7 @@ import Rate from "../../components/Rate/Rate";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import Tag from "../../components/Tag/Tag";
 import Slider from "../../components/Slider/Slider";
-import * as URL from '../../routes';
+import * as URL from "../../routes";
 
 const LocationView = () => {
   const { id } = useParams<{ id: string }>();
@@ -14,9 +14,8 @@ const LocationView = () => {
   console.log(locationData);
   const navigate = useNavigate();
   useEffect(() => {
-      if (!locationData) navigate(URL.NOT_FOUND);
+    if (!locationData) navigate(URL.NOT_FOUND);
   }, [locationData, navigate]);
-
 
   return (
     <div className="location-detail">
@@ -25,19 +24,19 @@ const LocationView = () => {
         <div className="title">
           <span className="text-title">{locationData?.title}</span>
           <span className="text-location">{locationData?.location}</span>
+          <div className="tags">
+            {locationData?.tags.map((tag) => (
+              <Tag tag={tag} />
+            ))}
+          </div>
         </div>
+      </div>
+      <div className="tags-rate">
+        <Rate rating={Number(locationData?.rating || 0)} />
         <div className="user">
           <span>{locationData?.host.name}</span>
           <img src={locationData?.host.picture} alt="profile" />
         </div>
-      </div>
-      <div className="tags-rate">
-        <div className="tags">
-          {locationData?.tags.map((tag) => (
-            <Tag tag={tag} />
-          ))}
-        </div>
-        <Rate rating={Number(locationData?.rating || 0)} />
       </div>
       <div className="dropdown-location">
         <Dropdown title="Description">

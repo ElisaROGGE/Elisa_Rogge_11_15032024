@@ -23,6 +23,15 @@
       right: 10px;
     }
   }
-  
+@media (max-width: 768px) {
+    .image-slider{
+        img{
+            height: 300px;
+        }
+        .slider-button{
+            font-size: 2rem;
+        }
+    }
+}
   
   
