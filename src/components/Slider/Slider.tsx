@@ -18,16 +18,26 @@ const Slider: React.FC<SliderProps> = ({ pictures }) => {
     );
   };
 
+  console.log(pictures.length)
+
   return (
     <div className="image-slider">
-      <button className="slider-button prev" onClick={prevImage}>
-        &#10094;
-      </button>
-      <img src={pictures[currentImageIndex]} alt="" />
-      <span className="numerotation">{currentImageIndex + 1}/{pictures.length}</span>
-      <button className="slider-button next" onClick={nextImage}>
-        &#10095;
-      </button>
+      {pictures.length !== 1 ? (
+        <div>
+          <button className="slider-button prev" onClick={prevImage}>
+            &#10094;
+          </button>
+          <img src={pictures[currentImageIndex]} alt="" />
+          <span className="numerotation">
+            {currentImageIndex + 1}/{pictures.length}
+          </span>
+          <button className="slider-button next" onClick={nextImage}>
+            &#10095;
+          </button>
+        </div>
+      ) : (
+        <img src={pictures[currentImageIndex]} alt="" />
+      )}
     </div>
   );
 };

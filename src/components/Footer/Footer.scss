@@ -8,10 +8,17 @@
     padding: 2rem;
     img{
         width: 100px;
-        height: 40px;
         padding-bottom: 1rem;
     }
     span{
         color: #ffffff;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer{
+        span{
+            font-size: 13px;
+        }
     }
 }

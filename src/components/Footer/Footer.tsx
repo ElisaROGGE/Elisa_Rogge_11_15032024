@@ -7,10 +7,10 @@ interface FooterProps {}
 const Footer: React.FC<FooterProps> = () => {
 
     return (
-        <div className='footer'>
+        <footer className='footer'>
             <img src={logo} alt="logo" />
             <span>© 2020 Kasa. All rights reserved</span>
-        </div>
+        </footer>
     );
 };
 

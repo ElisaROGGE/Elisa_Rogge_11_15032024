@@ -44,3 +44,12 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .home{
+        .locations {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
