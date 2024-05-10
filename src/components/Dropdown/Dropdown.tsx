@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BsChevronDown, BsChevronUp } from "react-icons/bs";
+import { BsChevronUp } from "react-icons/bs";
 import "./Dropdown.scss";
 
 interface DropdownProps {
@@ -16,9 +16,13 @@ const Dropdown: React.FC<DropdownProps> = ({ title, children }) => {
     <div className="dropdown">
       <div className="title" onClick={toggleOpen}>
         <div>{title}</div>
-        {isOpen ? <BsChevronUp /> : <BsChevronDown />}
+        <div className={`chevron ${isOpen ? "up" : "down"}`}>
+          <BsChevronUp />
+        </div>
       </div>
-      {isOpen && <div className="dropdown-content">{children}</div>}
+      <div className={`dropdown-content ${isOpen ? "show" : "hide"}`}>
+        <div className="content-inner">{children}</div>
+      </div>
     </div>
   );
 };

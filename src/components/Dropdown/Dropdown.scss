@@ -5,6 +5,7 @@
         background-color: #FF6060;
         font-size: 1.5rem;
         display: flex;
+        align-items: center;
         justify-content: space-between;
         color: white;
         font-weight: 500;
@@ -12,14 +13,37 @@
         font-family: "Montserrat", sans-serif;
     }
     .dropdown-content{
-        font-size: 1.2rem;
-        color: black;
-        padding: 1rem;
-        background-color: #F6F6F6;
-        border-radius: 10px;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.2s ease-out;
+        .content-inner {
+            font-size: 1.2rem;
+            color: black;
+            padding: 1rem;
+            background-color: #F6F6F6;
+            border-radius: 10px;
+        }
     }
+    .hide{
+        max-height: 0;
+    }
+    .show{
+        max-height: 200px;
+    }
+    .chevron {
+        display: flex;
+        transition: transform 0.3s ease-out;
+        transform-origin: center;
+      }
+      
+      .chevron.down {
+        transform: rotate(0deg);
+      }
+      
+      .chevron.up {
+        transform: rotate(-180deg);
+      }
 }
-
 @media (max-width: 768px) {
     .dropdown{
         .title{
