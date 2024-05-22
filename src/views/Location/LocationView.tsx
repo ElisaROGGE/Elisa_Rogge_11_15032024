@@ -30,12 +30,12 @@ const LocationView = () => {
             ))}
           </div>
         </div>
-      </div>
-      <div className="tags-rate">
-        <Rate rating={Number(locationData?.rating || 0)} />
-        <div className="user">
-          <span>{locationData?.host.name}</span>
-          <img src={locationData?.host.picture} alt="profile" />
+        <div className="tags-rate">
+          <div className="user">
+            <span>{locationData?.host.name}</span>
+            <img src={locationData?.host.picture} alt="profile" />
+          </div>
+          <Rate rating={Number(locationData?.rating || 0)} />
         </div>
       </div>
       <div className="dropdown-location">
