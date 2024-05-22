@@ -11,11 +11,10 @@ import * as URL from "../../routes";
 const LocationView = () => {
   const { id } = useParams<{ id: string }>();
   const locationData = jsonData.find((location) => location.id === id);
-  console.log(locationData);
   const navigate = useNavigate();
   useEffect(() => {
     if (!locationData) navigate(URL.NOT_FOUND);
-  }, [locationData, navigate]);
+  }, [locationData]);
 
   return (
     <div className="location-detail">
@@ -26,7 +25,7 @@ const LocationView = () => {
           <span className="text-location">{locationData?.location}</span>
           <div className="tags">
             {locationData?.tags.map((tag) => (
-              <Tag tag={tag} />
+              <Tag key={tag} tag={tag} />
             ))}
           </div>
         </div>
@@ -45,7 +44,7 @@ const LocationView = () => {
         <Dropdown title="Equipements">
           <ul>
             {locationData?.equipments.map((equipment) => (
-              <li>{equipment}</li>
+              <li key={equipment}>{equipment}</li>
             ))}
           </ul>
         </Dropdown>

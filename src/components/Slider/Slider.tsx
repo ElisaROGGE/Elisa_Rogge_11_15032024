@@ -18,8 +18,6 @@ const Slider: React.FC<SliderProps> = ({ pictures }) => {
     );
   };
 
-  console.log(pictures.length)
-
   return (
     <div className="image-slider">
       {pictures.length !== 1 ? (
