@@ -42,7 +42,7 @@ const LocationView = () => {
         <Dropdown title="Description">
           <span>{locationData?.description}</span>
         </Dropdown>
-        <Dropdown title="Equipments">
+        <Dropdown title="Equipements">
           <ul>
             {locationData?.equipments.map((equipment) => (
               <li>{equipment}</li>
